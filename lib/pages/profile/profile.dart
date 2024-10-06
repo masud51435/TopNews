@@ -23,7 +23,7 @@ class Profile extends StatelessWidget {
             ),
             ProfileMenuTile(
               icon: Icons.trending_up,
-              title: 'Trendings',
+              title: 'Trending',
               onTap: () {},
             ),
             ProfileMenuTile(
