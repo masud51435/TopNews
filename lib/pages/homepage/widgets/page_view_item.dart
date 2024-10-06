@@ -36,7 +36,7 @@ class HomePageViewItem extends StatelessWidget {
                 height: MediaQuery.of(context).size.height * 0.45,
                 decoration: BoxDecoration(
                   image: DecorationImage(
-                    image: AssetImage(imagePath), // Dynamic Background Image
+                    image: AssetImage(imagePath), 
                     fit: BoxFit.cover,
                   ),
                 ),
@@ -59,7 +59,7 @@ class HomePageViewItem extends StatelessWidget {
                   width: MediaQuery.of(context).size.width,
                   padding: const EdgeInsets.all(20),
                   child: Text(
-                    title, // Dynamic title
+                    title, 
                     style: TextStyle(
                       fontSize: 22,
                       fontWeight: FontWeight.bold,
@@ -101,7 +101,7 @@ class HomePageViewItem extends StatelessWidget {
                         ),
                         const SizedBox(height: 10),
                         Text(
-                          description, // Dynamic description
+                          description, 
                           style: const TextStyle(
                             fontSize: 18,
                             color: Colors.black87,
@@ -109,7 +109,7 @@ class HomePageViewItem extends StatelessWidget {
                         ),
                         const SizedBox(height: 10),
                         Text(
-                          source, // Dynamic source text
+                          source, 
                           style: const TextStyle(
                             fontSize: 14,
                             color: Colors.grey,

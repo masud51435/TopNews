@@ -69,7 +69,7 @@ class NavbarController extends GetxController {
   RxInt currentIndex = 0.obs;
 
   final screens = [
-     HomePageView(),
+     const HomePageView(),
     const Article(),
     const Notifications(),
     const Profile(),
