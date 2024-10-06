@@ -1,16 +1,13 @@
-# topnews
+# News App - Flutter
 
-A new Flutter project.
+This is a simple **News App** built using **Flutter** and **GetX** for state management. The app uses a `PageView` to display multiple news items with smooth animations like scale and fade transitions.
 
-## Getting Started
+## Features
 
-This project is a starting point for a Flutter application.
+- **PageView with Animation**: Smooth transitions between news pages with fade and scale animations.
+- **GetX Controller**: Manages the state and data of the news items efficiently.
+- **Responsive Layout**: The app adjusts to different screen sizes.
+- **Custom Design**: Each news page includes an image, title, and description in a clean and modern layout.
+- **Animation**: Added professional animations for a smooth user experience.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+---
