@@ -26,20 +26,29 @@ class CustomNavBar extends StatelessWidget {
           labelBehavior: NavigationDestinationLabelBehavior.alwaysHide,
           onDestinationSelected: (int index) =>
               controller.currentIndex.value = index,
-          destinations: const [
+          destinations: [
             NavigationDestination(
-              icon: Icon(Icons.home),
+              icon: Icon(
+                Icons.home,
+                color: greyColor,
+              ),
               label: 'Home',
             ),
             NavigationDestination(
-              icon: Icon(Icons.article_rounded),
+              icon: Icon(
+                Icons.article_rounded,
+                color: greyColor,
+              ),
               label: 'Article',
             ),
             NavigationDestination(
-              icon: Icon(Iconsax.notification5),
+              icon: Icon(
+                Iconsax.notification5,
+                color: greyColor,
+              ),
               label: 'Statistics',
             ),
-            NavigationDestination(
+            const NavigationDestination(
               icon: CircleAvatar(
                 radius: 15,
                 backgroundImage: AssetImage('assets/images/person.png'),

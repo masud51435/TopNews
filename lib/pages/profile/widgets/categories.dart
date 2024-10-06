@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:topnews/common/section_heading.dart';
+import 'package:topnews/core/app_colors.dart';
+import 'package:topnews/pages/profile/widgets/all_categories.dart';
 
 import '../../../controllers/news_categories_controller.dart';
 
@@ -15,7 +17,14 @@ class Categories extends StatelessWidget {
       children: [
         AppSectionHeading(
           text: 'Categories',
-          onTap: () {},
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const AllCategories(),
+              ),
+            );
+          },
         ),
         SizedBox(
           height: 190,
@@ -49,12 +58,12 @@ class Categories extends StatelessWidget {
                               category['img'],
                               height: controller.selectedCategory.value ==
                                       category['name']
-                                  ? 130
-                                  : 100,
+                                  ? 110
+                                  : 90,
                               width: controller.selectedCategory.value ==
                                       category['name']
-                                  ? 130
-                                  : 100,
+                                  ? 110
+                                  : 90,
                               fit: BoxFit.cover,
                             ),
                           ),
@@ -88,11 +97,31 @@ class Categories extends StatelessWidget {
                 padding: const EdgeInsets.all(15),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
-                  color: Colors.blueAccent,
                 ),
-                child: Text(
-                  item,
-                  style: const TextStyle(fontSize: 18, color: Colors.white),
+                child: Row(
+                  children: [
+                    Container(
+                      height: 50,
+                      width: 90,
+                      decoration: BoxDecoration(
+                        color: greyColor,
+                      ),
+                      child: const Icon(
+                        Icons.image,
+                        color: Colors.white54,
+                      ),
+                    ),
+                    const SizedBox(width: 10),
+                    Expanded(
+                      child: Text(
+                        item,
+                        maxLines: 2,
+                        style: const TextStyle(
+                          fontSize: 16,
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
               );
             },

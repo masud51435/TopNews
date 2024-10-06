@@ -5,7 +5,8 @@ class AppSectionHeading extends StatelessWidget {
     super.key,
     required this.text,
     this.anotherItem = const SizedBox.shrink(),
-    this.textColor, required this.onTap,
+    this.textColor,
+    required this.onTap,
   });
 
   final String text;
@@ -16,7 +17,7 @@ class AppSectionHeading extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(20.0),
+      padding: const EdgeInsets.only(left: 20, right: 20, top: 20, bottom: 5),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
