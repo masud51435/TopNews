@@ -40,17 +40,23 @@ class Categories extends StatelessWidget {
                       children: [
                         ClipRRect(
                           borderRadius: BorderRadius.circular(10),
-                          child: Image.asset(
-                            category['img'],
-                            height: controller.selectedCategory.value ==
+                          child: Opacity(
+                            opacity: controller.selectedCategory.value ==
                                     category['name']
-                                ? 130
-                                : 100,
-                            width: controller.selectedCategory.value ==
-                                    category['name']
-                                ? 130
-                                : 100,
-                            fit: BoxFit.cover,
+                                ? 1.0
+                                : 0.5,
+                            child: Image.asset(
+                              category['img'],
+                              height: controller.selectedCategory.value ==
+                                      category['name']
+                                  ? 130
+                                  : 100,
+                              width: controller.selectedCategory.value ==
+                                      category['name']
+                                  ? 130
+                                  : 100,
+                              fit: BoxFit.cover,
+                            ),
                           ),
                         ),
                         const SizedBox(height: 5),

@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:topnews/controllers/news_categories_controller.dart';
-import 'package:topnews/core/app_colors.dart';
 import 'package:topnews/pages/profile/widgets/profile_menu_tile.dart';
 
 import 'widgets/categories.dart';
