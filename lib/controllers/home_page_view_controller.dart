@@ -1,8 +1,12 @@
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class HomePageController extends GetxController {
   static HomePageController get instance => Get.find();
-  
+
+  // page controller for manage the page index
+  final PageController pageController = PageController();
+
   // List of pages data
   final pagesData = [
     {
@@ -60,5 +64,12 @@ class HomePageController extends GetxController {
   // Function to update current page index
   void updatePageIndex(int index) {
     currentPage.value = index;
+  }
+
+  @override
+  void dispose() {
+    // TODO: implement dispose
+    pageController.dispose();
+    super.dispose();
   }
 }

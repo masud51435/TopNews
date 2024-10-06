@@ -11,19 +11,35 @@ class HomePageView extends StatelessWidget {
     final HomePageController controller = Get.put(HomePageController());
     return Scaffold(
       body: PageView.builder(
+        controller: controller.pageController,
         itemCount: controller.pagesData.length,
         onPageChanged: (index) {
           controller.updatePageIndex(index);
         },
         itemBuilder: (context, index) {
           var page = controller.pagesData[index];
-          return HomePageViewItem(
-            imagePath: page['imagePath']!,
-            title: page['title']!,
-            postAt: page['postAt']!,
-            description: page['description']!,
-            source: page['source']!,
-          );
+          return AnimatedBuilder(
+              animation: controller.pageController,
+              builder: (context, child) {
+                double value = 1.0;
+                if (controller.pageController.position.haveDimensions) {
+                  value = controller.pageController.page! - index;
+                  value = (1 - (value.abs() * 0.2)).clamp(0.0, 1.0);
+                }
+                return Transform(
+                  transform: Matrix4.identity()..scale(value),
+                  child: Opacity(
+                    opacity: value,
+                    child: HomePageViewItem(
+                      imagePath: page['imagePath']!,
+                      title: page['title']!,
+                      postAt: page['postAt']!,
+                      description: page['description']!,
+                      source: page['source']!,
+                    ),
+                  ),
+                );
+              });
         },
       ),
     );
