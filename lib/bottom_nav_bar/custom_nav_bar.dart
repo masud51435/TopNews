@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:topnews/pages/homepage/homepage.dart';
+import 'package:topnews/pages/homepage/home_page_view.dart';
 import 'package:topnews/pages/notification/notifications.dart';
 import 'package:topnews/pages/profile/profile.dart';
 
@@ -69,7 +69,7 @@ class NavbarController extends GetxController {
   RxInt currentIndex = 0.obs;
 
   final screens = [
-    const Homepage(),
+     HomePageView(),
     const Article(),
     const Notifications(),
     const Profile(),
